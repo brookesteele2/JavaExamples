@@ -1,0 +1,2 @@
+module modularization5ComsumerModule {
+}

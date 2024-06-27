@@ -1,0 +1,19 @@
+package com.in28mintues.springboot.learn_jpa_and_hibernate.course.jpa;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.in28mintues.springboot.learn_jpa_and_hibernate.course.Course;
+
+import jakarta.persistence.EntityManager;
+
+public class CourseJpaRepository {
+	private EntityManager entityManager;
+
+	@Autowired
+	public void insert(Course course) {
+		entityManager.merge(course);
+	}
+
+
+
+}

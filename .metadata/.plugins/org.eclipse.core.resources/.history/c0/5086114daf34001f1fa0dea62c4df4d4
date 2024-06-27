@@ -1,0 +1,6 @@
+INSERT INTO course VALUES (id, author, name)
+values (100001,'me','learn microservices')
+INSERT INTO course VALUES (id, author, name)
+values (100002,'me','learn fullstack with React and Angular')
+INSERT INTO course VALUES (id, author, name)
+values (100002,'me','learn fullstack with React and Angular')

@@ -1,0 +1,36 @@
+package com.in28mintues.springboot.learn_jpa_and_hibernate.course;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+import com.in28mintues.springboot.learn_jpa_and_hibernate.course.springdatajpa.CourseSpringDataJpaRepository;
+
+@Component
+public class CourseCommandLineRunner implements CommandLineRunner {
+
+	// @Autowired
+	// private CourseJDBCRepository repository;
+
+	// @Autowired
+	// private CourseJpaRepository repository;
+
+	@Autowired
+	private CourseSpringDataJpaRepository repository;
+
+	@Override
+	public void run(String... args) throws Exception {
+		repository.save(new Course(1, "Learn AWS Jpa!", "in28minutes"));
+		repository.save(new Course(2, "Learn Azure Now!", "in28minutes"));
+		repository.save(new Course(3, "Learn Angular Now!", "in28minutes"));
+
+		repository.deleteById(2l);
+		System.out.println(repository.existsById(1l));
+		System.out.println(repository.existsById(3l));
+		
+		// repository.findAll();
+		System.out.println(repository.findAll());
+		System.out.println(repository.findAll());
+	}
+
+}

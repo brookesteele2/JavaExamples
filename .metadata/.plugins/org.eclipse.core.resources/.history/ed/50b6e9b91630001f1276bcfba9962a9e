@@ -1,0 +1,11 @@
+package com.in28minutes.learn_spring_framework.examples.a1;
+
+public interface DataService {
+	public class retrieveData() {
+		
+	}
+
+public static void main(String[] args) {
+	
+}
+}

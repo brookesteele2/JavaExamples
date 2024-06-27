@@ -1,0 +1,5 @@
+package com.in28mintues.learnSpringBoot.courses.bean;
+
+public class Course {
+
+}

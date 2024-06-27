@@ -1,0 +1,1 @@
+insert into COURSE (ID, AUTHOR, NAME) values(1000001, 'Brooke Steele', 'this worked')

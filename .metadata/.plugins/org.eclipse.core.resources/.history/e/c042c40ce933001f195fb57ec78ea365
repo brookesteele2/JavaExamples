@@ -1,0 +1,5 @@
+package com.in28mintues.springboot.learn_jpa_and_hibernate.course.springdatajpa;
+
+public class interface CourseSpringDataJpaRepository extends JpaRepository {
+
+}

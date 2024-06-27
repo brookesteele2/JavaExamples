@@ -1,0 +1,17 @@
+package com.in28mintues.springboot.learn_jpa_and_hibernate.course.jpa;
+
+import com.in28mintues.springboot.learn_jpa_and_hibernate.course.Course;
+
+import jakarta.persistence.EntityManager;
+
+public class CourseJpaRepository {
+	private EntityManager entityManager;
+
+	@Persistenc
+	public void insert(Course course) {
+		entityManager.merge(course);
+	}
+
+
+
+}

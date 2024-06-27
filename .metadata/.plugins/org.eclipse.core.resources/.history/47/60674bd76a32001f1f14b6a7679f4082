@@ -1,0 +1,2 @@
+spring.application.name=learnSpringBoot
+//management.endpoints.web.exposure.include=*

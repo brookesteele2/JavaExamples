@@ -1,0 +1,4 @@
+CREATE TABLE course {
+	id bigint NOT NULL,
+	name string
+};

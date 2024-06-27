@@ -1,0 +1,63 @@
+package com.in28minutes.learn_spring_framework;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+record Person(
+		String name, int age, Address address)
+{
+};
+
+record Address(
+String address1, String address2,
+		String city, String state, int zip) {
+};
+
+@Configuration
+public class HelloWorldConfiguration {
+
+	@Bean
+	public String name() {
+		return "Brooke";
+	}
+
+	@Bean
+	public int age() {
+		return 39;
+	}
+
+	@Bean
+	public Person person() {
+		return new Person("Jason", 40, new Address("1593 Sweetwater", "Dr", "Warner Robins", "GA", 31088));
+	}
+
+	@Bean
+	public Person person2MethodCall() {
+		return new Person(name(), age(), address());
+	}
+
+	@Bean
+	public Person person3Parameters(String name, int age, Address address3) {// name, age, address2
+		return new Person(name, age, address3);
+	}
+	
+	@Bean
+	public Person person3Parameters(String name, int age, Address address3) {// name, age, address2
+		return new Person(name, age, address3);
+	}
+
+	@Bean(name = "address2")
+	public Address address() {
+		var address = new Address("170 Wright Rd", " ", "Macon", "GA", 31217);
+
+		return address;
+	}
+
+	@Bean(name = "address3")
+	public Address address3() {
+		var address = new Address("206 Tudor", "Place", "Warner Robins", "GA", 31088);
+
+		return address;
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.in28minutes.junit;
+
+import static org.junit.jupiter.api.Assertions.fail;
+
+import org.junit.jupiter.api.Test;
+
+class MyBeforeAfterTest {
+
+	@Test
+	void test1() {
+		System.out.println("test 1")
+	}
+
+}
